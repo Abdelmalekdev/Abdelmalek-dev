@@ -467,8 +467,8 @@ footer{
         display: block;
         text-align: center;
     }
-    #home{
-    padding-top: 50px;
+    .maintexts , .mainlogo{
+        height: 100vh;
     }
     .maintexts h3{
         font-size: 2.5em;
@@ -489,9 +489,6 @@ footer{
 
 @media (max-width: 500px){
 
-    .maintexts , .mainlogo{
-        height: 100vh;
-    }
     .mainlogo img{
         width: 300px;
     }
@@ -510,7 +507,7 @@ footer{
         
     }
     .aboutimg img , .aboutimg .am{
-        width: 100px;
+        width: 120px;
     }
 
     .skillcategory{
@@ -522,16 +519,16 @@ footer{
 
 }
 
-@media (max-width: 376px) {
+@media (max-width: 400px) {
     .nav a{
         padding: 10px 7px;
         font-size: 1.2em;
     }
     .maintexts h3{
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .maintexts p{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .mainlogo img{
         width: 200px;
