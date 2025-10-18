@@ -467,11 +467,17 @@ footer{
         display: block;
         text-align: center;
     }
-    .maintexts , .mainlogo{
+    .main{
+        padding-top: 30px;
+    }
+    .maintexts{
         height: 100vh;
     }
     .maintexts h3{
         font-size: 2.5em;
+    }
+    .title{
+        padding-top: 50px;
     }
     .aboutimg img , .aboutimg .am{
         width: 200px;
