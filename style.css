@@ -489,6 +489,9 @@ footer{
 
 @media (max-width: 500px){
 
+    .maintexts , .mainlogo{
+        height: 100vh;
+    }
     .mainlogo img{
         width: 300px;
     }
