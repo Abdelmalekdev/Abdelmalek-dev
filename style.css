@@ -145,7 +145,7 @@ section{
 .button_cv:hover , .abouttext .codejeem:hover {
     background-color: var(--hover);
     transform: scale(1.05);
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .sociallinks{
