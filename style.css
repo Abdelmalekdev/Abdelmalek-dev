@@ -10,14 +10,13 @@
 }
 
 :root{
-    --bg: #fff ;
-    --bg2: #1b262cff;
-    --font: #144272ff ;
-    --hover: #3282b8ff ;
+    --bg: #fbf7f6ff ;
+    --font: #003f91ff ;
+    --hover: #00a6fbff ;
 }
 
 body{
-    background-color: var(--bj);
+    background-color: var(--bg);
     font-family: Quicksand   , sans-serif;
 }
 
@@ -38,6 +37,7 @@ a{
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--font);
+    border-radius: 1.5px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--hover);
@@ -121,6 +121,10 @@ section{
     padding: 20px;
 }
 
+.maintexts img{
+    width: 500px;
+}
+
 .maintexts  h3 , p{
     font-size: 3.1em;
     margin: 8px 0px;
@@ -138,14 +142,13 @@ section{
     color: var(--bg);
     font-size: 1.5em;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: ease 0.3s;
 }
 
 .button_cv:hover , .abouttext .codejeem:hover {
     background-color: var(--hover);
-    transform: scale(1.05);
-    letter-spacing: 1px;
+    transform: scale(1.1);
 }
 
 .sociallinks{
@@ -202,6 +205,7 @@ section{
     padding: 70px;
     border-radius: 20px;
     background-color: var(--font);
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font) 70% );
 }
 
 .aboutcontent{
@@ -259,6 +263,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     max-width: 1100px;
 }
 
@@ -275,7 +280,9 @@ section{
     justify-content: center;
     align-items: center;
     background-color: var(--font);
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font) , var(--hover) );
     border-radius: 10px;
+    width: 100%;
 }
 
 .skillcategory{
@@ -296,22 +303,25 @@ section{
     padding: 5px 40px;
     width: 100%;
     height: 150px;
-    background-color: var(--hover);
+    background-color: var(--bg);
     transition: ease 0.3s;
 }
 
 .skillcontainer:hover{
-    box-shadow: 0px 0px 10px var(--bg);
+    box-shadow: 0px 0px 10px var(--hover);
 }
 
 .i{
     width: 45px;
+    background-color: var(--font);
+    border-radius: 10px;
+    padding: 2px;
 }
 
 .skillcontainer p{
     font-size: 1.2em;
     font-weight: 500;
-    color: var(--bg);
+    color: var(--font);
 }
 
 .skillcontainer i{
@@ -328,6 +338,8 @@ section{
     justify-content: center;
 }
 
+
+
 .portfolio h3{
     color: var(--font);
     font-size: 3em;
@@ -339,14 +351,6 @@ section{
     font-size: 2.5em;
     color: var(--font);
     margin: 0 90px;
-}
-
-.portfolio hr{
-    width: 95%;
-    height: 5px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--font);
 }
 
 .portfoliocontent{
@@ -364,7 +368,8 @@ section{
     background-color: var(--font);
     margin: 40px 20px;
     box-shadow: 0px 0px 6px #000;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
     transition: ease 0.3s;
 }
 
@@ -373,7 +378,7 @@ section{
 }
 
 .cardtext{
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 
 .card p{
@@ -384,21 +389,25 @@ section{
 }
 
 .card a{
+    display: inline-block;
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 5px 10px;
     font-size: 1em;
     font-weight: 600;
-    color: var(--bg);
+    color: var(--font);
     transition: ease 0.3s;
     margin: 0 10px;
 }
 
 .card a:hover{
-    letter-spacing: 1.5px;
+    transform: scale(1.1);
     color: var(--hover);
 }
 
 .card img{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 2.5px;
     width: 390px;
 }
@@ -412,7 +421,9 @@ footer{
     align-items: center;
     z-index: 999;
     width: 100%;
+    background-color: rgb(6, 45, 92);
     background-color: var(--font);
+    background-image: linear-gradient(180deg ,var(--hover) , var(--font) );
     padding-top: 30px;
     box-shadow: 0 0 5px #000;
 }
@@ -436,7 +447,7 @@ footer{
 
 .footer hr{
     width: 95%;
-    height: 1px;
+    height: 2px;
     border-radius: 10px;
     background-color: var(--hover);
     border: none;
@@ -452,7 +463,7 @@ footer{
 
 /*footer*/
 
-.hovercolor , h3 i , h4 i{
+.hovercolor {
     color: var(--hover);
 }
 
@@ -498,6 +509,9 @@ footer{
     .mainlogo img{
         width: 300px;
     }
+    .maintexts img{
+        width: 300px;
+    }
     .about{
         margin: 0px;
     }
@@ -519,6 +533,11 @@ footer{
     .skillcategory{
         flex-wrap: wrap;
     }
+
+    .portfolio h4{
+        text-align: center;
+    }
+
     .card img{
         width: 300px;
     }
@@ -536,6 +555,9 @@ footer{
     .maintexts p{
         font-size: 1.1em;
     }
+    .maintexts img{
+        width: 250px;
+    }
     .mainlogo img{
         width: 200px;
     }
@@ -547,6 +569,10 @@ footer{
     }
     .abouttext h3{
         font-size: 1.5em;
+    }
+
+    .card a{
+        font-size: 0.7em;
     }
     .cardtext p{
         font-size: 1em;
@@ -561,6 +587,6 @@ footer{
         font-size: 1.5em;
     }
     #portfolio h4{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
