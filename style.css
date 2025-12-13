@@ -47,20 +47,22 @@ a{
 /*navbar*/
 
 header{
-    background-color: var(--bg); 
     width: 100%;
     position: fixed;
-    padding: 10px 40px;
+    padding: 20px 40px;
     z-index: 999;
-    box-shadow: 0 0 5px #000;
 }
  
 header .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
+    border-radius: 10px;
+    background-color: var(--bg);
+    opacity: 90%;
+    box-shadow: 0 0 5px #0000004e;
 }
 
 .logo{
@@ -108,26 +110,27 @@ section{
     flex-wrap: wrap;
     min-height: 100vh;
     max-width: 1100px;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .maintexts{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items:center;
     text-align: center;
     flex-direction: column;
     margin: 20px;
     padding: 20px;
+    padding-top: 100px;
 }
 
 .maintexts img{
     width: 500px;
 }
 
-.maintexts  h3 , p{
+.maintexts  p{
     font-size: 3.1em;
-    margin: 8px 0px;
+    margin: 10px 5cqmin;
     color: var(--font);
 }
 
@@ -141,7 +144,7 @@ section{
     background-color: var(--font);
     color: var(--bg);
     font-size: 1.5em;
-    padding: 10px 30px;
+    padding: 10px 90px;
     border-radius: 10px;
     transition: ease 0.3s;
 }
@@ -215,6 +218,10 @@ section{
     text-align: center;
 }
 
+#aboutusthb{
+    flex-direction: row-reverse;
+}
+
 .abouttext h3{
     color: var(--bg);
 }
@@ -279,9 +286,9 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--font);
-    background-image: linear-gradient(40deg ,var(--hover) , var(--font) , var(--hover) );
-    border-radius: 10px;
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font));
+    border-radius: 20px;
+    padding: 5px;
     width: 100%;
 }
 
@@ -298,17 +305,20 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    margin: 15px;
+    border-radius: 20px;
+    margin: 10px;
     padding: 5px 40px;
     width: 100%;
     height: 150px;
-    background-color: var(--bg);
+    background-color: var(--font);
     transition: ease 0.3s;
 }
 
-.skillcontainer:hover{
-    box-shadow: 0px 0px 10px var(--hover);
+.skillcontainer:hover {
+    background-color: var(--bg);
+}
+.skillcontainer:hover p{
+    color: var(--font);
 }
 
 .i{
@@ -321,7 +331,7 @@ section{
 .skillcontainer p{
     font-size: 1.2em;
     font-weight: 500;
-    color: var(--font);
+    color: var(--bg);
 }
 
 .skillcontainer i{
@@ -337,8 +347,6 @@ section{
     flex-direction: column;
     justify-content: center;
 }
-
-
 
 .portfolio h3{
     color: var(--font);
@@ -366,15 +374,15 @@ section{
     flex-direction: column;
     justify-content: center;
     background-color: var(--font);
-    margin: 40px 20px;
-    box-shadow: 0px 0px 6px #000;
+    margin: 15px 15px;
+    box-shadow: 0px 0px 6px #0000008f;
     border-radius: 10px;
     background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
     transition: ease 0.3s;
 }
 
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .cardtext{
@@ -474,9 +482,11 @@ footer{
 /*responsivity*/
 
 @media (max-width: 768px) {
+
     header .nav{
         display: block;
         text-align: center;
+        box-shadow: 0 0 0;
     }
     .main{
         padding-top: 30px;
@@ -506,10 +516,19 @@ footer{
 
 @media (max-width: 500px){
 
-    .mainlogo img{
-        width: 300px;
+    header{
+        padding: 10px 10px ;
     }
-    .maintexts img{
+    .main{
+        padding: 0;
+    }
+    .maintexts .button_cv{
+        padding: 10px 50px;
+    }
+    .maintexts{
+
+    }
+    .mainlogo img , .maintexts img{
         width: 300px;
     }
     .about{
