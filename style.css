@@ -366,6 +366,7 @@ section{
     margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .webcontent , .gamecontent{
     width: 100%;
     overflow-x:auto;
@@ -388,6 +389,9 @@ section{
 
 
 .webcontent::scroll-marker-group , .gamecontent::scroll-marker-group{
+=======
+.portfoliocontent{
+>>>>>>> 71a5981c33c5d7f43ebb8c4cd6d022a95279f61a
     display: flex;
     justify-content: center;
     gap: 0.5em;
@@ -465,7 +469,11 @@ section{
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--font);
+<<<<<<< HEAD
     margin: 20px 5px;
+=======
+    margin: 15px 15px;
+>>>>>>> 71a5981c33c5d7f43ebb8c4cd6d022a95279f61a
     box-shadow: 0px 0px 6px #0000008f;
     border-radius: 10px;
     background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
@@ -480,7 +488,11 @@ section{
 }
 
 .card:hover{
+<<<<<<< HEAD
     transform: scale(1.02);
+=======
+    transform: scale(1.05);
+>>>>>>> 71a5981c33c5d7f43ebb8c4cd6d022a95279f61a
 }
 
 .cardtext{
@@ -623,7 +635,13 @@ footer{
     .maintexts .button_cv{
         padding: 10px 50px;
     }
+<<<<<<< HEAD
 
+=======
+    .maintexts{
+
+    }
+>>>>>>> 71a5981c33c5d7f43ebb8c4cd6d022a95279f61a
     .mainlogo img , .maintexts img{
         width: 300px;
     }
