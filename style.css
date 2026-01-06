@@ -10,14 +10,13 @@
 }
 
 :root{
-    --bg: #fff ;
-    --bg2: #1b262cff;
-    --font: #144272ff ;
-    --hover: #3282b8ff ;
+    --bg: #fbf7f6ff ;
+    --font: #003f91ff ;
+    --hover: #00a6fbff ;
 }
 
 body{
-    background-color: var(--bj);
+    background-color: var(--bg);
     font-family: Quicksand   , sans-serif;
 }
 
@@ -38,6 +37,7 @@ a{
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--font);
+    border-radius: 1.5px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--hover);
@@ -47,20 +47,22 @@ a{
 /*navbar*/
 
 header{
-    background-color: var(--bg); 
     width: 100%;
     position: fixed;
-    padding: 10px 40px;
+    padding: 20px 40px;
     z-index: 999;
-    box-shadow: 0 0 5px #000;
 }
  
 header .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
+    border-radius: 10px;
+    background-color: var(--bg);
+    opacity: 90%;
+    box-shadow: 0 0 5px #0000004e;
 }
 
 .logo{
@@ -108,22 +110,27 @@ section{
     flex-wrap: wrap;
     min-height: 100vh;
     max-width: 1100px;
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .maintexts{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items:center;
     text-align: center;
     flex-direction: column;
     margin: 20px;
     padding: 20px;
+    padding-top: 100px;
 }
 
-.maintexts  h3 , p{
+.maintexts img{
+    width: 500px;
+}
+
+.maintexts  p{
     font-size: 3.1em;
-    margin: 8px 0px;
+    margin: 10px 5cqmin;
     color: var(--font);
 }
 
@@ -137,15 +144,14 @@ section{
     background-color: var(--font);
     color: var(--bg);
     font-size: 1.5em;
-    padding: 10px 30px;
-    border-radius: 50px;
+    padding: 10px 90px;
+    border-radius: 10px;
     transition: ease 0.3s;
 }
 
 .button_cv:hover , .abouttext .codejeem:hover {
     background-color: var(--hover);
-    transform: scale(1.05);
-    letter-spacing: 1.5px;
+    transform: scale(1.1);
 }
 
 .sociallinks{
@@ -202,6 +208,7 @@ section{
     padding: 70px;
     border-radius: 20px;
     background-color: var(--font);
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font) 70% );
 }
 
 .aboutcontent{
@@ -209,6 +216,10 @@ section{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#aboutusthb{
+    flex-direction: row-reverse;
 }
 
 .abouttext h3{
@@ -259,6 +270,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     max-width: 1100px;
 }
 
@@ -270,12 +282,15 @@ section{
 }
 
 .skillscontent{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--font);
-    border-radius: 10px;
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font));
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
 }
 
 .skillcategory{
@@ -291,21 +306,27 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    margin: 15px;
+    border-radius: 20px;
+    margin: 10px;
     padding: 5px 40px;
     width: 100%;
     height: 150px;
-    background-color: var(--hover);
+    background-color: var(--font);
     transition: ease 0.3s;
 }
 
-.skillcontainer:hover{
-    box-shadow: 0px 0px 10px var(--bg);
+.skillcontainer:hover {
+    background-color: var(--bg);
+}
+.skillcontainer:hover p{
+    color: var(--font);
 }
 
 .i{
     width: 45px;
+    background-color: var(--font);
+    border-radius: 10px;
+    padding: 2px;
 }
 
 .skillcontainer p{
@@ -326,6 +347,9 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .portfolio h3{
@@ -338,42 +362,129 @@ section{
 .portfolio h4{
     font-size: 2.5em;
     color: var(--font);
-    margin: 0 90px;
+    margin: 0px 90px;
+    margin-top: 30px;
 }
 
-.portfolio hr{
-    width: 95%;
-    height: 5px;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--font);
+.webcontent , .gamecontent{
+    width: 100%;
+    overflow-x:auto;
+    display: flex;
+    padding: 0;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
 }
 
-.portfoliocontent{
+/*carousel effect*/
+
+.webcontent{
+    anchor-name: --webcarousel;
+}
+
+.gamecontent{
+    anchor-name: --gamecarousel
+}
+
+
+
+.webcontent::scroll-marker-group , .gamecontent::scroll-marker-group{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
+    gap: 0.5em;
 }
+
+.card::scroll-marker{
+    content: ' ';
+    background-color: var(--font);
+    padding: 7px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.card::scroll-marker:target-current{
+    background-color: var(--hover);
+}
+
+.webcontent::-webkit-scrollbar , .gamecontent::-webkit-scrollbar{
+    display: none;
+}
+
+.webcontent::scroll-button(right) , .webcontent::scroll-button(left) , .gamecontent::scroll-button(right) , .gamecontent::scroll-button(left){
+    z-index: 99;
+    content: '▶';
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--font);
+    color: var(--bg);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.webcontent::scroll-button(right) , .webcontent::scroll-button(left){
+    position: fixed;
+    position-anchor: --webcarousel;
+    position-area:right center;
+    translate: -0%;
+}
+
+.gamecontent::scroll-button(right) , .gamecontent::scroll-button(left){
+    position: fixed;
+    position-anchor: --gamecarousel;
+    position-area:right center;
+    translate: -0%;
+}
+
+.webcontent::scroll-button(left) , .gamecontent::scroll-button(left){
+    content: '◀';
+    border-radius: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position-area:left center;
+    translate: 0%;
+}
+
+.webcontent::scroll-button(right):hover , .webcontent::scroll-button(left):hover , .gamecontent::scroll-button(right):hover , .gamecontent::scroll-button(left):hover{
+    background-color: var(--hover);
+}
+
+.webcontent::scroll-button(right):disabled , .webcontent::scroll-button(left):disabled , .gamecontent::scroll-button(right):disabled , .gamecontent::scroll-button(left):disabled{
+    opacity: 50%;
+}
+
+/*carousel effect*/
 
 .card{
+    scroll-snap-align: start;
     display: flex;
+    aspect-ratio: 5/3;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--font);
-    margin: 40px 20px;
-    box-shadow: 0px 0px 6px #000;
-    border-radius: 5px;
+    margin: 20px 5px;
+    box-shadow: 0px 0px 6px #0000008f;
+    border-radius: 10px;
+    background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
     transition: ease 0.3s;
 }
 
+#start{
+    margin-left: 0;
+}
+#end{
+    margin-right: 0;
+}
+
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .cardtext{
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 
 .card p{
@@ -384,23 +495,27 @@ section{
 }
 
 .card a{
+    display: inline-block;
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 5px 10px;
     font-size: 1em;
     font-weight: 600;
-    color: var(--bg);
+    color: var(--font);
     transition: ease 0.3s;
     margin: 0 10px;
 }
 
 .card a:hover{
-    letter-spacing: 1.5px;
+    transform: scale(1.1);
     color: var(--hover);
 }
 
 .card img{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 2.5px;
-    width: 390px;
+    width: 360px;
 }
 
 /*portfolio*/
@@ -412,7 +527,9 @@ footer{
     align-items: center;
     z-index: 999;
     width: 100%;
+    background-color: rgb(6, 45, 92);
     background-color: var(--font);
+    background-image: linear-gradient(180deg ,var(--hover) , var(--font) );
     padding-top: 30px;
     box-shadow: 0 0 5px #000;
 }
@@ -436,7 +553,7 @@ footer{
 
 .footer hr{
     width: 95%;
-    height: 1px;
+    height: 2px;
     border-radius: 10px;
     background-color: var(--hover);
     border: none;
@@ -452,7 +569,7 @@ footer{
 
 /*footer*/
 
-.hovercolor , h3 i , h4 i{
+.hovercolor {
     color: var(--hover);
 }
 
@@ -463,15 +580,23 @@ footer{
 /*responsivity*/
 
 @media (max-width: 768px) {
+
     header .nav{
         display: block;
         text-align: center;
+        box-shadow: 0 0 0;
     }
-    #home{
-    padding-top: 50px;
+    .main{
+        padding-top: 30px;
+    }
+    .maintexts{
+        height: 100vh;
     }
     .maintexts h3{
         font-size: 2.5em;
+    }
+    .title{
+        padding-top: 50px;
     }
     .aboutimg img , .aboutimg .am{
         width: 200px;
@@ -487,9 +612,19 @@ footer{
     }
 }
 
-@media (max-width: 426px){
+@media (max-width: 500px){
 
-    .mainlogo img{
+    header{
+        padding: 10px 10px ;
+    }
+    .main{
+        padding: 0;
+    }
+    .maintexts .button_cv{
+        padding: 10px 50px;
+    }
+
+    .mainlogo img , .maintexts img{
         width: 300px;
     }
     .about{
@@ -507,28 +642,36 @@ footer{
         
     }
     .aboutimg img , .aboutimg .am{
-        width: 100px;
+        width: 120px;
     }
 
     .skillcategory{
         flex-wrap: wrap;
     }
+
+    .portfolio h4{
+        text-align: center;
+    }
+
     .card img{
         width: 300px;
     }
 
 }
 
-@media (max-width: 376px) {
+@media (max-width: 400px) {
     .nav a{
         padding: 10px 7px;
         font-size: 1.2em;
     }
     .maintexts h3{
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .maintexts p{
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+    .maintexts img{
+        width: 250px;
     }
     .mainlogo img{
         width: 200px;
@@ -541,6 +684,10 @@ footer{
     }
     .abouttext h3{
         font-size: 1.5em;
+    }
+
+    .card a{
+        font-size: 0.7em;
     }
     .cardtext p{
         font-size: 1em;
@@ -555,6 +702,6 @@ footer{
         font-size: 1.5em;
     }
     #portfolio h4{
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
