@@ -306,7 +306,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 10px;
     padding: 5px 40px;
     width: 100%;
@@ -325,8 +325,8 @@ section{
 .i{
     width: 45px;
     background-color: var(--font);
-    border-radius: 10px;
-    padding: 2px;
+    border-radius: 100%;
+    padding: 5px;
 }
 
 .skillcontainer p{
@@ -467,7 +467,7 @@ section{
     background-color: var(--font);
     margin: 20px 5px;
     box-shadow: 0px 0px 6px #0000008f;
-    border-radius: 10px;
+    border-radius: 15px;
     background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
     transition: ease 0.3s;
 }
@@ -512,8 +512,8 @@ section{
 }
 
 .card img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     padding: 2.5px;
     width: 360px;
 }
