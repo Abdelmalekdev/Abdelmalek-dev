@@ -28,6 +28,13 @@ a{
     text-decoration: none;
 }
 
+section{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px  30px ;
+}
+
 /*scroll bar*/
 ::-webkit-scrollbar{
     width: 10px;
@@ -57,7 +64,7 @@ header .nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1150px;
+    max-width: 1200px;
     margin: auto;
     border-radius: 10px;
     background-color: var(--bg);
@@ -92,12 +99,7 @@ header .nav{
 
 /*main*/
 
-section{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px ;
-}
+
 
 #home{
     padding-top: 0;
@@ -190,7 +192,6 @@ section{
     display: flex;
     flex-direction: column;
     max-width: 1100px;
-    margin: 20px;
 }
 
 .about h3{
@@ -466,9 +467,10 @@ section{
     justify-content: space-between;
     background-color: var(--font);
     margin: 20px 5px;
-    box-shadow: 0px 0px 6px #0000008f;
+    /*box-shadow: 0px 0px 6px #0000008f;*/
     border-radius: 15px;
     background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
+    transition: 0.3s ease;
 }
 
 #start{
@@ -478,8 +480,8 @@ section{
     margin-right: 0;
 }
 
-.card:hover img{
-    background-color: var(--bg);
+.card:hover{
+    transform: translateY(-10px);
 }
 
 .cardtext{
@@ -515,7 +517,6 @@ section{
     border-top-right-radius: 15px;
     padding: 2.5px;
     width: 360px;
-    transition: ease 0.2s;
 }
 
 /*portfolio*/
@@ -580,7 +581,9 @@ footer{
 /*responsivity*/
 
 @media (max-width: 768px) {
-
+    #portfolio{
+        padding: 50px;
+    }
     header .nav{
         display: block;
         text-align: center;
