@@ -81,7 +81,7 @@ header .nav{
     font-size: 1.4em;
     font-weight: 600;
     color: var(--font);
-    padding: 10px 15px;
+    padding: 10px 20px;
     transition: 0.3s;
 }
 
@@ -467,7 +467,6 @@ header .nav{
     justify-content: space-between;
     background-color: var(--font);
     margin: 20px 5px;
-    /*box-shadow: 0px 0px 6px #0000008f;*/
     border-radius: 15px;
     background-image: linear-gradient(40deg ,var(--hover) , var(--font) 60% );
     transition: 0.3s ease;
@@ -491,8 +490,15 @@ header .nav{
 .card p{
     font-size: 1.5em;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: var(--bg);
+}
+
+.card h6{
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #eeeeee;
 }
 
 .card a{
@@ -617,8 +623,13 @@ footer{
 @media (max-width: 500px){
 
     header{
-        padding: 10px 10px ;
+        padding: 10px 15px ;
     }
+    .nav a{
+        font-size: 1.2em;
+        padding: 10px 10px;
+    }
+
     .main{
         padding: 0;
     }
